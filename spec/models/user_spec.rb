@@ -35,6 +35,12 @@ RSpec.describe User, type: :model do
     it { should have_db_index(:unlock_token) }
   end
 
+  describe "attribute strip" do
+    it { is_expected.to strip_attribute(:first_name).collapse_spaces }
+    it { is_expected.to strip_attribute(:last_name).collapse_spaces }
+    it { is_expected.to strip_attribute(:email).collapse_spaces }
+  end
+
   describe "validations" do
     it { should validate_presence_of(:first_name) }
     it { should validate_presence_of(:last_name) }
@@ -43,6 +49,5 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:last_name).is_at_most(100) }
     it { should validate_length_of(:email).is_at_most(100) }
     it { should allow_value(%w(true false)).for(:admin) }
-    # it { should validate_inclusion_of(:admin).in_array([true, false]) }
   end
 end
