@@ -8,4 +8,12 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :email, presence: true, length: { maximum: 100 }
   validates :admin, inclusion: { in: [true, false] }
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def initial
+    "#{first_name[0].upcase}#{last_name[0].upcase}"
+  end
 end

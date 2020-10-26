@@ -1,0 +1,16 @@
+.user-dropdown-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  font-weight: 600;
+  background-color: #B7B7B7;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 18px;
+
+  &::after {
+    content: none;
+  }
+}

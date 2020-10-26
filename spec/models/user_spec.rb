@@ -50,4 +50,20 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:email).is_at_most(100) }
     it { should allow_value(%w(true false)).for(:admin) }
   end
+
+  describe "#full_name" do
+    let(:user) { create(:user, first_name: "Palash", last_name: "Bera") }
+
+    it "should return the full name of the user" do
+      expect(user.full_name).to eq("Palash Bera")
+    end
+  end
+
+  describe "#initial" do
+    let(:user) { create(:user, first_name: "palash", last_name: "bera") }
+
+    it "should return the initial of the user" do
+      expect(user.initial).to eq("PB")
+    end
+  end
 end
