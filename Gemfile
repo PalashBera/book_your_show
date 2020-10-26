@@ -10,6 +10,7 @@ gem "pg", "~> 1.2", ">= 1.2.3"
 gem "puma", "~> 5.0", ">= 5.0.2"
 gem "rails", "~> 6.0", ">= 6.0.3.4"
 gem "sass-rails", "~> 6.0"
+gem "strip_attributes", "~> 1.11"
 gem "turbolinks", "~> 5.2", ">= 5.2.1"
 gem "webpacker", "~> 5.2", ">= 5.2.1"
 
