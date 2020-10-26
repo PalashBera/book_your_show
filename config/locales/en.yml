@@ -10,3 +10,5 @@ en:
   message_type:
     notice: "success"
     alert: "danger"
+
+  unauthorized_access: "You are not authorized for this action."
